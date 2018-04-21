@@ -16,3 +16,13 @@
 	font-size: 20px;
 	box-sizing: border-box;
 }
+
+
+.hide {
+	opacity: 0;
+}
+
+
+.differentBackground {
+	background: red;
+}
