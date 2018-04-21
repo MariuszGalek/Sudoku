@@ -1,9 +1,10 @@
 import React from "react";
+import style from '../styles/Tile.css'
 
 const Tile = (props) => {
 	return (
 		<input
-			className="tile"
+			className="Tile"
 			type="number"
             value={props.value} 
             id={props.id} 

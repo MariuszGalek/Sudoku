@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Board from '../presentational/Board';
-import Title from '../presentational/Title';
 import sudoku from 'sudoku-umd';
+import style from "../styles/App.css";
 
 class App extends React.Component {
 
@@ -13,17 +13,22 @@ class App extends React.Component {
 		};
 	}
 
+    onChangeHandler(value, id) {
+        var array = this.state.board.split('').map((tile, index) => 
+            (index === parseInt(id, 0)) ? ((value !== "") && (value < 10) && (value > 0) ? value : ".") : tile)
+        .join('');
+        this.setState({board : array});
+	}
+
 	render() {
 		return (
 			<div className={style.App}>
-				<h1>Sudoku</h1>
-				   <Board />
-				   <div className="buttons">
-				       <button>Check</button>
-				       <button>New Game</button>
-				       <button>Solve</button>
-				       <button>Restart</button>
-				   	</div>
+				<h1>Sudoku Game</h1>
+				<Board 
+                    board={this.state.board.split('')} 
+                    initialBoard={this.state.initialBoard.split('')} 
+                    onChange={(value, id) => this.onChangeHandler(value, id)}
+				/>
 			</div>
 		);
 	}

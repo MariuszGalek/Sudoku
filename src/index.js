@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
+import { AppContainer } from "react-hot-loader";
 
-ReactDOM.render(<h1>Sudoku</h1>, document.getElementById('root'));
+ReactDOM.render(<App/>, document.getElementById('App'));
