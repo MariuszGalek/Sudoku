@@ -1,5 +1,5 @@
 {
-  "name": "Sudoku App",
+  "name": "Sudoku",
   "version": "1.0.0",
   "description": "Sudoku game",
   "main": "webpack.config.js",

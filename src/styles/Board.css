@@ -1,27 +1,43 @@
 .Board {
 	display: flex;
-	width: 450px;
-	height: 450px;
+	width: 540px;
+	height: 540px;
 	flex-wrap: wrap;
 	margin: 0 auto;
+	border: 3px solid black;
 	opacity: 1;
-	transition: .4s all;
+	transition: .3s all;
+	box-shadow: 5px 5px grey;
 }
 
-
 .Tile {
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	height: 60px;
 	text-align: center;
-	font-size: 20px;
+	font-size: 25px;
+	font-weight: bold;
 	box-sizing: border-box;
 }
 
+.Tile:nth-child(3n+3){
+    border-right: 3px solid black;
+}
+.Tile:nth-child(n+19){
+    border-bottom: 3px solid black;
+}
+.Tile:nth-child(n+28){
+    border-bottom: 1px solid black;
+}
+.Tile:nth-child(n+46){
+    border-bottom: 3px solid black;
+}
+.Tile:nth-child(n+55){
+    border-bottom: 1px solid black;
+}
 
 .hide {
 	opacity: 0;
 }
-
 
 .differentBackground {
 	background: red;

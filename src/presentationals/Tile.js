@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Tile = props => {
 	return (
 		<input
@@ -11,4 +10,5 @@ const Tile = props => {
 		/>
 	);
 };
+
 export default Tile;

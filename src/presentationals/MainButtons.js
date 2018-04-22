@@ -6,10 +6,10 @@ const MainButtons = props => (
 	<div
 		className={style.MainButtons + " " + (props.hideBoard_MainButtons ? style.hide : "")}
 	>
-		<button onClick={props.newGame}>New Game</button>
-		<button onClick={props.resetBoard}>Restart</button>
-		<button onClick={props.checkSudoku}>Check</button>
-		<button onClick={props.solveSudoku}>Solve</button>
+		<button className={style.MainButton} onClick={props.newGame}>NEW GAME</button>
+		<button className={style.MainButton} onClick={props.resetBoard}>RESTART</button>
+		<button className={style.MainButton} onClick={props.checkSudoku}>CHECK</button>
+		<button className={style.MainButton} onClick={props.solveSudoku}>SOLVE</button>
 	</div>
 );
 

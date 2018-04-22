@@ -94,15 +94,16 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className={style.App}>
-				<h1>Sudoku</h1>
-
+				<h1 className={style.Title}>Sudoku</h1>
 				<DifficultyLevel
 					hideDifficultyLevel={this.state.hideDifficultyLevel}
 					setDifficultyEasy={() => this.setDifficulty("easy")}
 					setDifficultyMedium={() => this.setDifficulty("medium")}
 					setDifficultyHard={() => this.setDifficulty("hard")}
+					setDifficultyVeryHard={() => this.setDifficulty("very-hard")}
+					setDifficultyInsane={() => this.setDifficulty("insane")}
+					setDifficultyInhuman={() => this.setDifficulty("inhuman")}
 				/>
-
 				<Board
 					hideBoard_MainButtons={this.state.hideBoard_MainButtons}
 					board={this.state.board}
@@ -110,7 +111,6 @@ class App extends React.Component {
 					onChange={this.handleChange.bind(this)}
 					checkedAnswers={this.state.checkedAnswers}
 				/>
-
 				<MainButtons
 					hideBoard_MainButtons={this.state.hideBoard_MainButtons}
 					resetBoard={this.resetBoard.bind(this)}

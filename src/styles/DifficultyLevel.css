@@ -1,12 +1,28 @@
 .DifficultyLevel {
-	margin-bottom: 60px;
+	margin-bottom: 20px;
 	display: flex;
 	justify-content: space-around;
-	opacity: 1;
-	transition: .4s all;
 	width: 100%;
 }
 
+.DifficultyButton {
+	width: 15%;
+	height: 40px;
+	border-radius: 10px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.DifficultyButton:hover {
+	color: white;
+	background-color: black;
+}
+
+.DifficultyTitle {
+	margin: 0 auto;
+	display: inline;
+}
+
 .hide {
-	opacity: 0;
+	display: none;
 }
